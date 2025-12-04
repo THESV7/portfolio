@@ -2,7 +2,7 @@
 
 html, body { font-family: var(--font-Outfit); }
 
-@theme {
+@theme inline {
   /* Colors */
   --color-light-hover: #fcf4ff;
   --color-dark-hover: #2a004a;
@@ -10,5 +10,5 @@ html, body { font-family: var(--font-Outfit); }
 
   /* Fonts */
   --font-Outfit: var(--_next_font_outfit);
-  --font-Ovo: var(--_next_font_ovo)
+  --font-Ovo: var(--_next_font_ovo);
 }
