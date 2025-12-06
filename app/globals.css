@@ -11,4 +11,15 @@ html, body { font-family: var(--font-Outfit); }
   /* Fonts */
   --font-Outfit: var(--_next_font_outfit);
   --font-Ovo: var(--_next_font_ovo);
+
+  /* Shadows */
+  --shadow-black: 4px 4px 0 #000;
+  --shadow-white: 4px 4px 0 #fff;
+
+  
+}
+
+/* Custom Grid */
+@utility grid-cols-auto {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }

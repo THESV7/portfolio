@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body suppressHydrationWarning
         className={`${outfit.variable} ${ovo.variable} leading-8 overflow-x-hidden`}
       >
