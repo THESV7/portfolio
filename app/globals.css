@@ -1,12 +1,17 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 html, body { font-family: var(--font-Outfit); }
 
 @theme inline {
   /* Colors */
   --color-light-hover: #fcf4ff;
-  --color-dark-hover: #2a004a;
-  --color-dark-theme: #11001f;
+  --color-dark-theme: #121212;
+  --color-dark-hover: #262626;
+
+  /* --color-dark-hover: #2a004a;
+  --color-dark-theme: #11001f; */
 
   /* Fonts */
   --font-Outfit: var(--_next_font_outfit);
