@@ -1,8 +1,10 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
+import { useTheme } from "next-themes";
 
-const Navbar = ({ isDarkMode, setIsDarkMode }) => {
+const Navbar = () => {
+  const { theme, setTheme, resolvedTheme } = useTheme();
   const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef();
 
@@ -61,7 +63,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           
           {/* --- FIXED TOGGLE BUTTON --- */}
           <button
-            onClick={() => setIsDarkMode((prev) => !prev)}
+            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
             className="cursor-pointer"
           >
             {/* 1. Moon Icon: Show in Light Mode, Hide in Dark Mode */}
