@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${outfit.variable} ${ovo.variable} leading-8 overflow-x-hidden dark:bg-dark-theme dark:text-white`}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           {children}
         </ThemeProvider>
       </body>
