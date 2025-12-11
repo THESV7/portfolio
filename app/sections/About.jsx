@@ -11,7 +11,7 @@ const About = () => {
       transition={{ duration: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       id="about"
-      className="w-full px-[12%] py-10 scroll-mt-20 relative z-11"
+      className="w-full px-[12%] py-20 scroll-mt-20 relative z-11"
     >
       <motion.h4
         initial={{ opacity: 0, y: 20 }}

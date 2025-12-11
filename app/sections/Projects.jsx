@@ -11,7 +11,7 @@ const Projects = () => {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
       id="project"
-      className="w-full px-[12%] py-10 scroll-mt-20 relative z-11"
+      className="w-full px-[12%] py-20 scroll-mt-20 relative z-11"
     >
       <motion.h4
         initial={{ y: 20, opacity: 0 }}

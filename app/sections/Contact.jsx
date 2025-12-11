@@ -36,7 +36,7 @@ const Contact = () => {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
       id="contact"
-      className="relative w-full px-[12%] py-10 scroll-mt-20 z-10"
+      className="relative w-full px-[12%] py-20 scroll-mt-20 z-10"
     >
       {/* Background Image */}
       <Image
