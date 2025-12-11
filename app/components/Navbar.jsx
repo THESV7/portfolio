@@ -103,7 +103,7 @@ const Navbar = () => {
               {activeSection === item.href.slice(1) && (
                 <motion.span
                   layoutId="activeSection"
-                  className="absolute inset-0 bg-gray-200/50 rounded-full -z-0 dark:bg-white/10"
+                  className="absolute inset-0 bg-black/5 rounded-full -z-0 dark:bg-white/10"
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
