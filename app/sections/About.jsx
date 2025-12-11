@@ -61,9 +61,7 @@ const About = () => {
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl lg:max-w-3xl font-Ovo">
-            I'm a frontend developer passionate about building clean, responsive, and user-focused web interfaces.
-I enjoy turning ideas into smooth, functional experiences using React, Next.js, and modern UI tools.
-With a strong foundation in computer engineering and hands-on project experience, I focus on writing efficient code and creating designs that feel intuitive and polished.
+            I'm a frontend developer passionate about creating clean, responsive, and user-focused interfaces. I enjoy turning ideas into smooth, functional web experiences using React, Next.js, and modern UI tools, with a focus on efficient code and intuitive design.
           </p>
 
           <motion.ul
