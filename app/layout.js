@@ -2,6 +2,7 @@ import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import SmoothCursor from "./components/SmoothCursor";
+import SmoothScroll from "./components/SmoothScroll";
 
 const outfit = Outfit({
   subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--_next_font_outfit",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
       >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <SmoothScroll />
           <SmoothCursor />
           {children}
         </ThemeProvider>

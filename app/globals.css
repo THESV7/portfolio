@@ -5,6 +5,8 @@
 html,
 body {
   font-family: var(--font-Outfit);
+  scroll-behavior: smooth;
+  /* Native smooth scroll for initial anchor jumps */
 }
 
 @theme inline {
