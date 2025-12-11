@@ -9,12 +9,12 @@ const About = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-100px" }}
       id="about"
       className="w-full px-[12%] py-10 scroll-mt-20 relative z-11"
     >
       <motion.h4
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
@@ -23,9 +23,9 @@ const About = () => {
         Introduction
       </motion.h4>
       <motion.h2
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
         viewport={{ once: true }}
         className="text-center text-5xl font-Ovo"
       >
@@ -56,7 +56,7 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
           className="flex-1"
         >
@@ -71,7 +71,7 @@ const About = () => {
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
             viewport={{ once: true }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl font-Outfit"
           >
@@ -104,7 +104,7 @@ const About = () => {
           <motion.h4
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.3, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 1 }}
             viewport={{ once: true }}
             className="font-Ovo my-6 text-gray-700 dark:text-white/80"
           >
@@ -113,7 +113,7 @@ const About = () => {
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.5 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
             viewport={{ once: true }}
             className="flex items-center gap-3 sm:gap-5"
           >

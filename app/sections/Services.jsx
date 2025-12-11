@@ -14,30 +14,30 @@ const Services = () => {
       className="w-full px-[12%] py-10 scroll-mt-20 relative z-11"
     >
       <motion.h4
-        initial={{ y: -20, opacity: 0 }}
+        initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         className="text-center mb-2 text-lg font-Ovo"
       >
         What I offer
       </motion.h4>
 
       <motion.h2
-        initial={{ y: -20, opacity: 0 }}
+        initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         className="text-center text-5xl font-Ovo"
       >
         My Services
       </motion.h2>
 
       <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.7, duration: 0.5 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi esse
@@ -45,10 +45,10 @@ const Services = () => {
       </motion.p>
 
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.6 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         className="grid grid-cols-auto gap-6 my-10 font-Outfit"
       >
         {serviceData.map(({ icon, title, description, link }, index) => (

@@ -14,29 +14,29 @@ const Projects = () => {
       className="w-full px-[12%] py-10 scroll-mt-20 relative z-11"
     >
       <motion.h4
-        initial={{ y: -20, opacity: 0 }}
+        initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         className="text-center mb-2 text-lg font-Ovo"
       >
         My projects
       </motion.h4>
       <motion.h2
-        initial={{ y: -20, opacity: 0 }}
+        initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         className="text-center text-5xl font-Ovo"
       >
         My latest work
       </motion.h2>
 
       <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.7, duration: 0.5 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi esse
@@ -44,10 +44,10 @@ const Projects = () => {
       </motion.p>
 
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.6 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         className="grid grid-cols-auto my-10 gap-5 font-Outfit dark:text-black"
       >
         {workData.map((project, index) => (
@@ -73,10 +73,10 @@ const Projects = () => {
       </motion.div>
 
       <motion.a
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.5 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         href=""
         className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] broder-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-light-hover duration-500 font-Outfit dark:text-white dark:border-white dark:hover:bg-dark-hover"
       >

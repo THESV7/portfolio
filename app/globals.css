@@ -2,7 +2,10 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-html, body { font-family: var(--font-Outfit); }
+html,
+body {
+  font-family: var(--font-Outfit);
+}
 
 @theme inline {
   /* Colors */
@@ -21,7 +24,37 @@ html, body { font-family: var(--font-Outfit); }
   --shadow-black: 4px 4px 0 #000;
   --shadow-white: 4px 4px 0 #fff;
 
-  
+
+
+  /* Animations */
+  --animate-wheel: wheel 2s infinite;
+  --animate-scroll-down: scroll-down 1.5s infinite;
+
+  @keyframes wheel {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+
+  @keyframes scroll-down {
+    0% {
+      transform: translate(0);
+    }
+
+    20% {
+      transform: translateY(15px);
+    }
+
+    40% {
+      transform: translate(0);
+    }
+  }
 }
 
 /* Custom Grid */
