@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${outfit.variable} ${ovo.variable} leading-8 overflow-x-hidden dark:bg-dark-theme dark:text-white`}
+        className={`${outfit.variable} ${ovo.variable} text-base sm:text-lg leading-8 overflow-x-hidden dark:bg-dark-theme dark:text-white`}
         suppressHydrationWarning
       >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>

@@ -34,7 +34,7 @@ const Header = () => {
         viewport={{ once: true }}
         className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
       >
-        Frontend web developer based in Mumbai.
+        Frontend Web Developer based in Mumbai.
       </motion.h1>
 
       <motion.p
@@ -44,9 +44,7 @@ const Header = () => {
         viewport={{ once: true }}
         className="max-w-2xl mx-auto font-Ovo"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corrupti
-        molestiae, porro veniam fuga quos doloribus temporibus reiciendis? Non,
-        minus?
+        I build responsive, user-centric websites with a focus on clean design and smooth performance.
       </motion.p>
 
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">

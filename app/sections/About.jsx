@@ -61,11 +61,9 @@ const About = () => {
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl lg:max-w-3xl font-Ovo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-            adipisci quos amet sequi sed cumque, labore velit similique
-            blanditiis eos fugiat dolores architecto commodi, quas reiciendis
-            minima, a nobis? Quis, error eius porro doloribus quo perspiciatis
-            modi est alias exercitationem.
+            I'm a frontend developer passionate about building clean, responsive, and user-focused web interfaces.
+I enjoy turning ideas into smooth, functional experiences using React, Next.js, and modern UI tools.
+With a strong foundation in computer engineering and hands-on project experience, I focus on writing efficient code and creating designs that feel intuitive and polished.
           </p>
 
           <motion.ul
@@ -94,7 +92,7 @@ const About = () => {
                 <h3 className="my-4 font-semibold text-gray-700 dark:text-white">
                   {title}
                 </h3>
-                <p className="text-gray-600 text-sm dark:text-white/80">
+                <p className="text-gray-600 text-base dark:text-white/80">
                   {description}
                 </p>
               </motion.li>

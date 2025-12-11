@@ -94,7 +94,7 @@ const Navbar = () => {
           {navItems.map((item) => (
             <li key={item.name} className="relative">
               <a
-                className="font-Ovo text-sm relative z-10 py-1 px-3"
+                className="font-Ovo text-base relative z-10 py-1 px-3"
                 href={item.href}
               >
                 {item.name}
