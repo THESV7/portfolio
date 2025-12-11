@@ -71,7 +71,7 @@ const About = () => {
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <motion.li
                 whileHover={{ scale: 1.05 }}
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-light-hover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-dark-hover/50"
+                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-light-hover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-dark-hover"
                 key={index}
               >
                 <Image
