@@ -96,7 +96,6 @@ const Navbar = () => {
               <a
                 className="font-Ovo text-sm relative z-10 py-1 px-3"
                 href={item.href}
-                onClick={() => setActiveSection(item.href.slice(1))}
               >
                 {item.name}
               </a>
@@ -192,7 +191,6 @@ const Navbar = () => {
                 className="font-Ovo block relative z-10 py-1 px-3"
                 href={item.href}
                 onClick={() => {
-                  setActiveSection(item.href.slice(1));
                   closeMenu();
                 }}
               >
