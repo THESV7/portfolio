@@ -9,6 +9,7 @@ const About = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
+      viewport={{ once: true }}
       id="about"
       className="w-full px-[12%] py-10 scroll-mt-20 relative z-11"
     >
@@ -16,6 +17,7 @@ const About = () => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
         className="text-center mb-2 text-lg font-Ovo"
       >
         Introduction
@@ -24,6 +26,7 @@ const About = () => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
+        viewport={{ once: true }}
         className="text-center text-5xl font-Ovo"
       >
         About me
@@ -33,12 +36,14 @@ const About = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="flex w-full max-w-screen-xl mx-auto flex-col lg:flex-row items-center gap-20 my-20"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
           className="w-64 sm:w-80 rounded-3xl max-w-none"
         >
           <Image
@@ -52,6 +57,7 @@ const About = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true }}
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl lg:max-w-3xl font-Ovo">
@@ -65,7 +71,8 @@ const About = () => {
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            viewport={{ once: true }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl font-Outfit"
           >
             {infoList.map(({ icon, iconDark, title, description }, index) => (
@@ -97,7 +104,8 @@ const About = () => {
           <motion.h4
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            transition={{ duration: 1.3, delay: 0.5 }}
+            viewport={{ once: true }}
             className="font-Ovo my-6 text-gray-700 dark:text-white/80"
           >
             Tools I use
@@ -105,7 +113,8 @@ const About = () => {
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.6 }}
+            transition={{ duration: 0.6, delay: 1.5 }}
+            viewport={{ once: true }}
             className="flex items-center gap-3 sm:gap-5"
           >
             {toolsData.map((tool, index) => (
