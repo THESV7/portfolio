@@ -1,11 +1,11 @@
 'use client'
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import About from "./sections/About";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
+import Header from "./sections/Header";
 import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
-import Services from "./components/Services";
+import Projects from "./sections/Projects";
+import Services from "./sections/Services";
 
 export default function Home() {
   return (
