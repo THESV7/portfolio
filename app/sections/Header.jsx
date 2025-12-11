@@ -5,7 +5,7 @@ import { motion, spring } from "motion/react";
 
 const Header = () => {
   return (
-    <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 relative z-11">
+    <div id="top" className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 relative z-11">
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
@@ -22,7 +22,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo"
       >
-        Hi! I'm Smit Vadhel{" "}
+        Hi! I&apos;m Smit Vadhel{" "}
         <Image src={assets.hand_icon} alt="" className="w-6" />
       </motion.h3>
 

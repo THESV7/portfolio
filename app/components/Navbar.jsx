@@ -2,10 +2,20 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
+import { motion } from "motion/react";
+
+const navItems = [
+  { name: "Home", href: "#top" },
+  { name: "About me", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Projects", href: "#project" },
+  { name: "Contact me", href: "#contact" },
+];
 
 const Navbar = () => {
   const { theme, setTheme, resolvedTheme } = useTheme();
   const [isScroll, setIsScroll] = useState(false);
+  const [activeSection, setActiveSection] = useState("top");
   const sideMenuRef = useRef();
 
   const openMenu = () => {
@@ -23,6 +33,26 @@ const Navbar = () => {
       } else {
         setIsScroll(false);
       }
+
+      // Active Section Logic
+      const sections = navItems
+        .map((item) => {
+          const section = document.querySelector(item.href);
+          if (section) return { id: item.href.slice(1), offsetTop: section.offsetTop };
+          return null;
+        })
+        .filter((item) => item !== null)
+        .sort((a, b) => a.offsetTop - b.offsetTop);
+
+      let currentSection = "top";
+
+      sections.forEach((section) => {
+        if (window.scrollY >= section.offsetTop - 550) {
+          currentSection = section.id;
+        }
+      });
+
+      setActiveSection(currentSection);
     };
 
     // Check on initial load
@@ -32,6 +62,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -60,11 +91,24 @@ const Navbar = () => {
               : "bg-white/50 shadow-sm dark:border-white/50 dark:bg-transparent"
           }`}
         >
-          <li><a className="font-Ovo" href="#top">Home</a></li>
-          <li><a className="font-Ovo" href="#services">Services</a></li>
-          <li><a className="font-Ovo" href="#about">About me</a></li>
-          <li><a className="font-Ovo" href="#project">Projects</a></li>
-          <li><a className="font-Ovo" href="#contact">Contact me</a></li>
+          {navItems.map((item) => (
+            <li key={item.name} className="relative">
+              <a
+                className="font-Ovo text-sm relative z-10 py-1 px-3"
+                href={item.href}
+                onClick={() => setActiveSection(item.href.slice(1))}
+              >
+                {item.name}
+              </a>
+              {activeSection === item.href.slice(1) && (
+                <motion.span
+                  layoutId="activeSection"
+                  className="absolute inset-0 bg-gray-200/50 rounded-full -z-0 dark:bg-white/10"
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                />
+              )}
+            </li>
+          ))}
         </ul>
 
         <div className="flex items-center gap-4">
@@ -142,11 +186,27 @@ const Navbar = () => {
             />
           </div>
 
-          <li><a className="font-Ovo" onClick={closeMenu} href="#top">Home</a></li>
-          <li><a className="font-Ovo" onClick={closeMenu} href="#services">Services</a></li>
-          <li><a className="font-Ovo" onClick={closeMenu} href="#about">About me</a></li>
-          <li><a className="font-Ovo" onClick={closeMenu} href="#project">Projects</a></li>
-          <li><a className="font-Ovo" onClick={closeMenu} href="#contact">Contact me</a></li>
+          {navItems.map((item) => (
+             <li key={item.name} className="relative w-fit">
+              <a
+                className="font-Ovo block relative z-10 py-1 px-3"
+                href={item.href}
+                onClick={() => {
+                  setActiveSection(item.href.slice(1));
+                  closeMenu();
+                }}
+              >
+                {item.name}
+              </a>
+              {activeSection === item.href.slice(1) && (
+                <motion.span
+                  layoutId="activeSectionMobile"
+                  className="absolute inset-0 bg-black/5 rounded-full -z-0 dark:bg-white/20"
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                />
+              )}
+            </li>
+          ))}
         </ul>
       </nav>
     </>
