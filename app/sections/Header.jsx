@@ -6,7 +6,7 @@ import ScrollDown from "../components/ui/ScrollDown";
 
 const Header = () => {
   return (
-    <div id="top" className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 relative z-11">
+    <div id="top" className="w-11/12 max-w-3xl text-center mx-auto min-h-screen flex flex-col items-center justify-center gap-4 pt-28 md:pt-0 relative z-11">
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}

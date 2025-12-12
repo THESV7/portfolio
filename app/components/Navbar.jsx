@@ -28,7 +28,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 1) {
         setIsScroll(true);
       } else {
         setIsScroll(false);
@@ -67,7 +67,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed top-0 right-0 w-11/12 z-10 translate-y-[-80%] dark:hidden">
+      <div className="absolute top-0 right-0 w-11/12 z-10 translate-y-[-80%] dark:hidden">
         <Image src={assets.header_bg_color} alt="" className="w-full blur-md" />
       </div>
       

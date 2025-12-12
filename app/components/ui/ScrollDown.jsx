@@ -2,7 +2,7 @@ import React from 'react'
 
 const ScrollDown = () => {
   return (
-    <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 cursor-pointer">
+    <div className="mt-12 md:mt-0 md:absolute md:bottom-12 md:left-1/2 md:-translate-x-1/2 z-10 flex flex-col items-center gap-2 cursor-pointer">
         {/* Minimal Text */}
         <span className="text-base font-Outfit text-gray-600 dark:text-gray-300 tracking-widest uppercase animate-pulse">
             Scroll Down
