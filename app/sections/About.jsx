@@ -49,7 +49,7 @@ const About = () => {
           <Image
             src={assets.user_image}
             alt="user"
-            className="w-full rounded-3xl"
+            className="w-full max-w-[275px] rounded-3xl"
           />
         </motion.div>
 
@@ -61,7 +61,7 @@ const About = () => {
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl lg:max-w-3xl font-Ovo">
-            I'm a frontend developer passionate about creating clean, responsive, and user-focused interfaces. I enjoy turning ideas into smooth, functional web experiences using React, Next.js, and modern UI tools, with a focus on efficient code and intuitive design.
+            I'm a frontend developer passionate about building clean, responsive, and user-focused web interfaces. I enjoy turning ideas into smooth, functional experiences using React, Next.js, and modern UI tools. With a strong foundation in computer engineering and hands-on project experience, I focus on writing efficient code and creating designs that feel intuitive and polished.
           </p>
 
           <motion.ul
@@ -93,33 +93,6 @@ const About = () => {
                 <p className="text-gray-600 text-base dark:text-white/80">
                   {description}
                 </p>
-              </motion.li>
-            ))}
-          </motion.ul>
-
-          <motion.h4
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1 }}
-            viewport={{ once: true }}
-            className="font-Ovo my-6 text-gray-700 dark:text-white/80"
-          >
-            Tools I use
-          </motion.h4>
-          <motion.ul
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-3 sm:gap-5"
-          >
-            {toolsData.map((tool, index) => (
-              <motion.li
-                whileHover={{ scale: 1.1 }}
-                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer duration-500"
-                key={index}
-              >
-                <Image src={tool} alt="tool" className="w-5 sm:w-7" />
               </motion.li>
             ))}
           </motion.ul>
