@@ -1,40 +1,56 @@
-import user_image from './user-image.jpg';
-import code_icon from './code-icon.png';
-import code_icon_dark from './code-icon-dark.png';
-import edu_icon from './edu-icon.png';
-import edu_icon_dark from './edu-icon-dark.png';
-import project_icon from './project-icon.png';
-import project_icon_dark from './project-icon-dark.png';
-import vscode from './vscode.png';
-import firebase from './firebase.png';
-import figma from './figma.png';
-import git from './git.png';
-import mongodb from './mongodb.png';
-import right_arrow_white from './right-arrow-white.png';
-import logo from './logo.png';
-import logo_dark from './logo_dark.png';
-import mail_icon from './mail_icon.png';
-import mail_icon_dark from './mail_icon_dark.png';
-import profile_img from './profile-image.jpeg';
-import download_icon from './download-icon.png';
-import hand_icon from './hand-icon.png';
-import header_bg_color from './header-bg-color.png';
-import moon_icon from './moon_icon.png';
-import sun_icon from './sun_icon.png';
-import arrow_icon from './arrow-icon.png';
-import arrow_icon_dark from './arrow-icon-dark.png';
-import menu_black from './menu-black.png';
-import menu_white from './menu-white.png';
-import close_black from './close-black.png';
-import close_white from './close-white.png';
-import web_icon from './web-icon.png';
-import mobile_icon from './mobile-icon.png';
-import ui_icon from './ui-icon.png';
-import graphics_icon from './graphics-icon.png';
-import right_arrow from './right-arrow.png';
-import send_icon from './send-icon.png';
-import right_arrow_bold from './right-arrow-bold.png';
-import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import user_image from './images/user-image.jpg';
+import code_icon from './about/code-icon.png';
+import code_icon_dark from './about/code-icon-dark.png';
+import edu_icon from './about/edu-icon.png';
+import edu_icon_dark from './about/edu-icon-dark.png';
+import project_icon from './about/project-icon.png';
+import project_icon_dark from './about/project-icon-dark.png';
+import vscode from './tools/vscode.png';
+import firebase from './tools/firebase.png';
+import figma from './tools/figma.png';
+import git from './tools/git.png';
+import mongodb from './tools/mongodb.png';
+import right_arrow_white from './ui/right-arrow-white.png';
+import logo from './ui/logo.png';
+import logo_dark from './ui/logo_dark.png';
+import mail_icon from './ui/mail_icon.png';
+import mail_icon_dark from './ui/mail_icon_dark.png';
+import profile_img from './images/profile-image.jpeg';
+import download_icon from './ui/download-icon.png';
+import hand_icon from './ui/hand-icon.png';
+import header_bg_color from './ui/header-bg-color.png';
+import moon_icon from './ui/moon_icon.png';
+import sun_icon from './ui/sun_icon.png';
+import arrow_icon from './ui/arrow-icon.png';
+import arrow_icon_dark from './ui/arrow-icon-dark.png';
+import menu_black from './ui/menu-black.png';
+import menu_white from './ui/menu-white.png';
+import close_black from './ui/close-black.png';
+import close_white from './ui/close-white.png';
+import web_icon from './services/web-icon.png';
+import mobile_icon from './services/mobile-icon.png';
+import ui_icon from './services/ui-icon.png';
+import graphics_icon from './services/graphics-icon.png';
+import right_arrow from './ui/right-arrow.png';
+import send_icon from './ui/send-icon.png';
+import right_arrow_bold from './ui/right-arrow-bold.png';
+import right_arrow_bold_dark from './ui/right-arrow-bold-dark.png';
+
+// New SVG imports
+import html from './skills/html.svg';
+import css from './skills/css.svg';
+import javascript from './skills/javascript.svg';
+import typescript from './skills/typescript.svg';
+import react from './skills/react.svg';
+import nextjs from './skills/nextjs.svg';
+import tailwind from './skills/tailwind.svg';
+import nodejs from './skills/nodejs.svg';
+import mongodb_svg from './skills/mongodb.svg';
+import framer_motion from './skills/framer-motion.svg';
+import git_svg from './tools/git.svg';
+import github from './tools/github.svg';
+import vercel from './tools/vercel.svg';
+import antigravity from './tools/antigravity.png';
 
 export const assets = {
     user_image,
@@ -73,7 +89,21 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    html,
+    css,
+    javascript,
+    typescript,
+    react,
+    nextjs,
+    tailwind,
+    nodejs,
+    mongodb_svg,
+    framer_motion,
+    git_svg,
+    github,
+    vercel,
+    antigravity
 };
 
 export const workData = [
@@ -107,11 +137,28 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Experience', description: 'Fresher' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript, React.js, Next.js' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.E. in Computer Engineering' },
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Projects', description: 'Built 10+ projects' }
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built 10+ projects' }
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    { icon: assets.vscode, title: 'VS Code' },
+    { icon: assets.git_svg, title: 'Git' },
+    { icon: assets.github, title: 'GitHub', isDark: true },
+    { icon: assets.vercel, title: 'Vercel', isDark: true },
+    { icon: assets.antigravity, title: 'Antigravity' },
+];
+
+export const skillsData = [
+    { icon: assets.html, title: 'HTML' },
+    { icon: assets.css, title: 'CSS' },
+    { icon: assets.javascript, title: 'JavaScript' },
+    { icon: assets.typescript, title: 'TypeScript' },
+    { icon: assets.react, title: 'React Js' },
+    { icon: assets.nextjs, title: 'Next Js', isDark: true },
+    { icon: assets.tailwind, title: 'Tailwind CSS' },
+    { icon: assets.nodejs, title: 'Node Js' },
+    { icon: assets.mongodb_svg, title: 'MongoDB' },
+    { icon: assets.framer_motion, title: 'Framer Motion', isDark: true },
 ];

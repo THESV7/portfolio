@@ -1,4 +1,4 @@
-import { assets, infoList, toolsData } from "@/assets/assets";
+import { assets, infoList, toolsData, skillsData } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
@@ -98,6 +98,55 @@ const About = () => {
           </motion.ul>
         </motion.div>
       </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1.3 }}
+        viewport={{ once: true }}
+        className="my-20"
+      >
+        <h4 className="text-center mb-8 text-xl font-Ovo">My Skills</h4>
+        <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+          {skillsData.map(({ icon, title, isDark }, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ y: -5 }}
+              className="flex items-center gap-3 px-6 py-3 rounded-full border border-gray-400 bg-white shadow-sm dark:bg-black/20 dark:border-white/20 hover:bg-light-hover dark:hover:bg-dark-hover cursor-pointer transition-all duration-300"
+            >
+              <Image src={icon} alt={title} className={`w-8 ${isDark ? 'dark:invert' : ''}`} />
+              <span className="font-Ovo text-gray-700 dark:text-white">
+                {title}
+              </span>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1.5 }}
+        viewport={{ once: true }}
+        className="my-20"
+      >
+        <h4 className="text-center mb-8 text-xl font-Ovo">Tools I use</h4>
+        <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+          {toolsData.map(({ icon, title, isDark }, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ y: -5 }}
+              className="flex items-center gap-3 px-6 py-3 rounded-full border border-gray-400 bg-white shadow-sm dark:bg-black/20 dark:border-white/20 hover:bg-light-hover dark:hover:bg-dark-hover cursor-pointer transition-all duration-300"
+            >
+              {icon && <Image src={icon} alt={title} className={`w-8 ${isDark ? 'dark:invert' : ''}`} />}
+              <span className="font-Ovo text-gray-700 dark:text-white">
+                {title}
+              </span>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+
     </motion.div>
   );
 };
