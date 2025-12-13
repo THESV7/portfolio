@@ -112,10 +112,10 @@ const About = () => {
             <motion.div
               key={index}
               whileHover={{ y: -5 }}
-              className="flex items-center gap-3 px-6 py-3 rounded-full border border-gray-400 bg-white shadow-sm dark:bg-black/20 dark:border-white/20 hover:bg-light-hover dark:hover:bg-dark-hover cursor-pointer transition-all duration-300"
+              className="flex items-center gap-3 px-4 py-2 sm:px-6 sm:py-3 rounded-full border border-gray-400 bg-white shadow-sm dark:bg-black/20 dark:border-white/20 hover:bg-light-hover dark:hover:bg-dark-hover cursor-pointer transition-all duration-300"
             >
-              <Image src={icon} alt={title} className={`w-8 ${isDark ? 'dark:invert' : ''}`} />
-              <span className="font-Ovo text-gray-700 dark:text-white">
+              <Image src={icon} alt={title} className={`w-6 sm:w-8 ${isDark ? 'dark:invert' : ''}`} />
+              <span className="font-Ovo text-sm sm:text-base text-gray-700 dark:text-white">
                 {title}
               </span>
             </motion.div>
@@ -136,10 +136,10 @@ const About = () => {
             <motion.div
               key={index}
               whileHover={{ y: -5 }}
-              className="flex items-center gap-3 px-6 py-3 rounded-full border border-gray-400 bg-white shadow-sm dark:bg-black/20 dark:border-white/20 hover:bg-light-hover dark:hover:bg-dark-hover cursor-pointer transition-all duration-300"
+              className="flex items-center gap-3 px-4 py-2 sm:px-6 sm:py-3 rounded-full border border-gray-400 bg-white shadow-sm dark:bg-black/20 dark:border-white/20 hover:bg-light-hover dark:hover:bg-dark-hover cursor-pointer transition-all duration-300"
             >
-              {icon && <Image src={icon} alt={title} className={`w-8 ${isDark ? 'dark:invert' : ''}`} />}
-              <span className="font-Ovo text-gray-700 dark:text-white">
+              {icon && <Image src={icon} alt={title} className={`w-6 sm:w-8 ${isDark ? 'dark:invert' : ''}`} />}
+              <span className="font-Ovo text-sm sm:text-base text-gray-700 dark:text-white">
                 {title}
               </span>
             </motion.div>
