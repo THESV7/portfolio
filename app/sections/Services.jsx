@@ -40,8 +40,7 @@ const Services = () => {
         viewport={{ once: true, margin: "-100px" }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi esse
-        soluta nesciunt, distinctio vitae at dolor voluptatem! Cum, illo magni.
+        I specialize in building high-performance web applications, crafting intuitive user interfaces, and ensuring seamless digital experiences with modern technologies.
       </motion.p>
 
       <motion.div
@@ -55,19 +54,18 @@ const Services = () => {
           <motion.div
             whileHover={{ scale: 1.05 }}
             key={index}
-            className="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-light-hover hover:-translate-y-1 duration-500 dark:hover:bg-dark-hover dark:hover:shadow-white"
+            className="border border-gray-400 rounded-lg px-8 py-10 hover:shadow-black cursor-pointer hover:bg-light-hover hover:-translate-y-1 duration-500 dark:hover:bg-dark-hover dark:hover:shadow-white"
           >
-            <Image src={icon} alt="" className="w-10" />
+            <div className="w-12 h-12 bg-[#ff004f] rounded-lg flex items-center justify-center mb-4">
+              <Image src={icon} alt="" className="w-6 invert" />
+            </div>
             <h3 className="text-lg my-4 text-gray-700 dark:text-white">
               {title}
             </h3>
-            <p className="text-base text-gray-600 dark:text-white/80 leading-5">
+            <p className="text-base text-gray-600 dark:text-white/80 leading-6">
               {description}
             </p>
-            <a href={link} className="flex items-center gap-2 text-base mt-5">
-              Read more{" "}
-              <Image src={assets.right_arrow} alt="" className="w-4" />
-            </a>
+
           </motion.div>
         ))}
       </motion.div>

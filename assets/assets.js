@@ -35,6 +35,10 @@ import right_arrow from './ui/right-arrow.png';
 import send_icon from './ui/send-icon.png';
 import right_arrow_bold from './ui/right-arrow-bold.png';
 import right_arrow_bold_dark from './ui/right-arrow-bold-dark.png';
+import web_development from './services/web-development.svg';
+import responsive from './services/responsive.svg';
+import api_integration from './services/api-integration.svg';
+import performance from './services/performance.svg';
 
 // New SVG imports
 import html from './skills/html.svg';
@@ -103,7 +107,11 @@ export const assets = {
     git_svg,
     github,
     vercel,
-    antigravity
+    antigravity,
+    web_development,
+    responsive,
+    api_integration,
+    performance,
 };
 
 export const workData = [
@@ -130,10 +138,10 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.web_development, title: 'Web Development', description: 'Building responsive, high-performance web applications using React.js and Next.js, ensuring a seamless user experience.', link: '' },
+    { icon: assets.responsive, title: 'Responsive Design', description: 'Creating mobile-first, adaptive layouts with Tailwind CSS that look great on all devices, from minimal UIs to complex dashboards.', link: '' },
+    { icon: assets.api_integration, title: 'API Integration', description: 'Connecting frontend interfaces with backend services, handling real-time data, and optimizing state management for dynamic content.', link: '' },
+    { icon: assets.performance, title: 'Performance', description: 'Optimizing application speed through debounce, lazy loading, and efficient code practices to ensure fast load times and smooth interactions.', link: '' },
 ]
 
 export const infoList = [
