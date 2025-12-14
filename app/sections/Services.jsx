@@ -30,7 +30,7 @@ const Services = () => {
         viewport={{ once: true, margin: "-100px" }}
         className="text-center text-5xl font-Ovo"
       >
-        My Services
+        My Expertise
       </motion.h2>
 
       <motion.p
@@ -62,7 +62,7 @@ const Services = () => {
             <h3 className="text-lg my-4 text-gray-700 dark:text-white">
               {title}
             </h3>
-            <p className="text-base text-gray-600 dark:text-white/80 leading-6">
+            <p className="text-base text-gray-700 dark:text-white/80 leading-6">
               {description}
             </p>
 
