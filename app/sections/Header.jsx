@@ -10,7 +10,7 @@ const Header = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3 }}
         viewport={{ once: true }}
       >
         <Image src={assets.profile_img} alt="" className="rounded-full w-32" />
@@ -19,7 +19,7 @@ const Header = () => {
       <motion.h3
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
         viewport={{ once: true }}
         className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo"
       >
@@ -30,7 +30,7 @@ const Header = () => {
       <motion.h1
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
+        transition={{ duration: 0.3, delay: 0.4 }}
         viewport={{ once: true }}
         className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
       >
@@ -40,7 +40,7 @@ const Header = () => {
       <motion.p
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.3, delay: 0.5 }}
         viewport={{ once: true }}
         className="max-w-2xl mx-auto font-Ovo"
       >
@@ -51,7 +51,7 @@ const Header = () => {
         <motion.a
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.3, delay: 0.6 }}
           viewport={{ once: true }}
           href="#contact"
           className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 font-Outfit dark:bg-transparent"
@@ -63,7 +63,7 @@ const Header = () => {
         <motion.a
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
+          transition={{ duration: 0.3, delay: 0.7 }}
           viewport={{ once: true }}
           href="/sample-resume.pdf"
           download

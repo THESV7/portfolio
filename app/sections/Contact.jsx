@@ -33,10 +33,10 @@ const Contact = () => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       viewport={{ once: true }}
       id="contact"
-      className="relative w-full px-[12%] py-20 scroll-mt-20 z-10"
+      className="relative w-full px-[12%] py-10 lg:py-20 scroll-mt-20 z-10"
     >
       {/* Background Image */}
       <Image
@@ -49,7 +49,7 @@ const Contact = () => {
       <motion.h4
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
+        transition={{ delay: 0.3, duration: 0.3 }}
         viewport={{ once: true, margin: "-100px" }}
         className="text-center mb-2 text-lg font-Ovo"
       >
@@ -58,7 +58,7 @@ const Contact = () => {
       <motion.h2
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
+        transition={{ delay: 0.5, duration: 0.3 }}
         viewport={{ once: true, margin: "-100px" }}
         className="text-center text-5xl font-Ovo"
       >
@@ -67,7 +67,7 @@ const Contact = () => {
       <motion.p
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.5 }}
+        transition={{ delay: 0.7, duration: 0.3 }}
         viewport={{ once: true, margin: "-100px" }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
@@ -78,7 +78,7 @@ const Contact = () => {
       <motion.form
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.9, duration: 0.5 }}
+        transition={{ delay: 0.9, duration: 0.3 }}
         viewport={{ once: true, margin: "-100px" }}
         onSubmit={onSubmit}
         className="max-w-2xl mx-auto font-Outfit"
@@ -87,7 +87,7 @@ const Contact = () => {
           <motion.input
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.1, duration: 0.6 }}
+            transition={{ delay: 1.1, duration: 0.5 }}
             viewport={{ once: true, margin: "-100px" }}
             type="text"
             placeholder="Enter your name"
@@ -99,7 +99,7 @@ const Contact = () => {
           <motion.input
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
+            transition={{ delay: 1.2, duration: 0.5 }}
             viewport={{ once: true, margin: "-100px" }}
             type="email"
             placeholder="Enter your email"
@@ -112,7 +112,7 @@ const Contact = () => {
         <motion.textarea
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1.3, duration: 0.6 }}
+          transition={{ delay: 1.3, duration: 0.5 }}
           viewport={{ once: true, margin: "-100px" }}
           rows="6"
           placeholder="Enter your message"

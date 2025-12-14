@@ -8,15 +8,15 @@ const About = () => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       viewport={{ once: true, margin: "-100px" }}
       id="about"
-      className="w-full px-[12%] py-20 scroll-mt-20 relative z-11"
+      className="w-full px-[12%] pt-20 pb-10 lg:py-20 scroll-mt-20 relative z-11"
     >
       <motion.h4
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
         viewport={{ once: true }}
         className="text-center mb-2 text-lg font-Ovo"
       >
@@ -25,7 +25,7 @@ const About = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
+        transition={{ duration: 0.3, delay: 0.4 }}
         viewport={{ once: true }}
         className="text-center text-5xl font-Ovo"
       >
@@ -35,14 +35,14 @@ const About = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="flex w-full max-w-screen-xl mx-auto flex-col lg:flex-row items-center gap-20 my-20"
+        className="flex w-full max-w-screen-xl mx-auto flex-col lg:flex-row items-center gap-20 my-10 lg:my-20"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
           className="w-64 sm:w-80 rounded-3xl max-w-none"
         >
@@ -56,7 +56,7 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.4, delay: 0.6 }}
           viewport={{ once: true }}
           className="flex-1"
         >
@@ -67,7 +67,7 @@ const About = () => {
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
             viewport={{ once: true }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl font-Outfit"
           >
@@ -102,9 +102,9 @@ const About = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.3 }}
+        transition={{ duration: 0.3, delay: 1.3 }}
         viewport={{ once: true }}
-        className="my-20"
+        className="my-10 lg:my-20"
       >
         <h4 className="text-center mb-8 text-xl font-Ovo">My Skills</h4>
         <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
@@ -126,9 +126,9 @@ const About = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.5 }}
+        transition={{ duration: 0.3, delay: 1.5 }}
         viewport={{ once: true }}
-        className="my-20"
+        className="my-10 lg:my-20"
       >
         <h4 className="text-center mb-8 text-xl font-Ovo">Tools I use</h4>
         <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
