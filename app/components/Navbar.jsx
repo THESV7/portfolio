@@ -17,6 +17,13 @@ const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
   const [activeSection, setActiveSection] = useState("top");
   const sideMenuRef = useRef();
+  
+  // Transition State
+  const [overlayStyle, setOverlayStyle] = useState({
+    opacity: 0,
+    backgroundColor: 'transparent',
+    pointerEvents: 'none',
+  });
 
   const openMenu = () => {
     sideMenuRef.current.style.transform = "translateX(-16rem)";
@@ -65,8 +72,67 @@ const Navbar = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const handleThemeChange = () => {
+    const isDark = resolvedTheme === 'dark';
+    const nextTheme = isDark ? 'light' : 'dark';
+    
+    // Sequence Configuration
+    // To Light: Flash Black -> Wait -> Flash White -> Switch Theme -> Fade Out
+    // To Dark: Flash White -> Wait -> Flash Black -> Switch Theme -> Fade Out
+
+    // Step 1: Start Color (Opposite of target usually, or distinct flash)
+    // Request: "dark mode -> light mode": turn full black -> full white
+    // Request: "light mode -> dark mode": turn full white -> full dark
+    
+    const startColor = isDark ? '#121212' : 'white'; 
+    const endColor = isDark ? 'white' : '#121212';
+
+    // Phase 1: Fade In First Color
+    setOverlayStyle({
+      opacity: 1,
+      backgroundColor: startColor,
+      pointerEvents: 'all',
+      transition: 'opacity 0.4s ease-in-out'
+    });
+
+    setTimeout(() => {
+        // Phase 2: Snap to Second Color (while opaque)
+        setOverlayStyle(prev => ({
+            ...prev,
+            backgroundColor: endColor,
+            transition: 'background-color 0.4s ease-in-out' 
+        }));
+
+        setTimeout(() => {
+            // Phase 3: Switch Theme and Fade Out
+            setTheme(nextTheme);
+            
+            // Allow theme to apply before fading out
+            setTimeout(() => {
+                setOverlayStyle({
+                    opacity: 0,
+                    backgroundColor: endColor,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.6s ease-in-out'
+                });
+            }, 100);
+
+        }, 400); // Wait for color transition
+    }, 400); // Wait for initial fade in
+  };
+
   return (
     <>
+      {/* Full Screen Transition Overlay */}
+      <div 
+        style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+          ...overlayStyle
+        }}
+      />
+
       <div className="absolute top-0 right-0 w-11/12 z-10 translate-y-[-80%] dark:hidden">
         <Image src={assets.header_bg_color} alt="" className="w-full blur-md" />
       </div>
@@ -114,7 +180,7 @@ const Navbar = () => {
           
           {/* --- FIXED TOGGLE BUTTON --- */}
           <button
-            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+            onClick={handleThemeChange}
             className="cursor-pointer"
           >
             {/* 1. Moon Icon: Show in Light Mode, Hide in Dark Mode */}
