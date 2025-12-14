@@ -36,7 +36,7 @@ const Contact = () => {
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
       id="contact"
-      className="relative w-full px-[12%] py-10 lg:py-20 scroll-mt-20 z-10"
+      className="relative w-full px-[12%] py-10 lg:py-12 scroll-mt-20 z-10"
     >
       {/* Background Image */}
       <Image
@@ -69,7 +69,7 @@ const Contact = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.7, duration: 0.3 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
+        className="text-center max-w-2xl mx-auto mt-5 mb-8 font-Ovo"
       >
         I&apos;d love to hear from you! If you have any questions, comments, or
         feedback, please use the form below.
@@ -83,7 +83,7 @@ const Contact = () => {
         onSubmit={onSubmit}
         className="max-w-2xl mx-auto font-Outfit"
       >
-        <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
+        <div className="grid grid-cols-auto gap-6 mt-6 mb-5">
           <motion.input
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -117,7 +117,7 @@ const Contact = () => {
           rows="6"
           placeholder="Enter your message"
           required
-          className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-dark-hover/30 dark:border-white/90"
+          className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-4 dark:bg-dark-hover/30 dark:border-white/90"
           name="message "
         ></motion.textarea>
 

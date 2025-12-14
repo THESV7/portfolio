@@ -2,15 +2,15 @@ import React from 'react'
 
 const ScrollDown = () => {
   return (
-    <div className="mt-12 md:mt-0 md:absolute md:bottom-12 md:left-1/2 md:-translate-x-1/2 z-10 flex flex-col items-center gap-2 cursor-pointer">
+    <div className="mt-12 md:mt-0 z-10 flex flex-col items-center gap-1 cursor-pointer">
         {/* Minimal Text */}
-        <span className="text-base font-Outfit text-gray-600 dark:text-gray-300 tracking-widest uppercase animate-pulse">
+        <span className="text-sm font-Outfit text-gray-600 dark:text-gray-300 tracking-widest uppercase animate-pulse">
             Scroll Down
         </span>
 
         {/* Desktop: Mouse Animation */}
-        <div className="hidden md:flex justify-center w-[30px] h-[50px] border border-[#333] dark:border-white/80 rounded-full relative">
-            <div className="w-1 h-3 bg-[#333] dark:bg-white rounded-full mt-2 animate-wheel"></div>
+        <div className="hidden md:flex justify-center w-[20px] h-[35px] border border-[#333] dark:border-white/80 rounded-full relative">
+            <div className="w-1 h-2 bg-[#333] dark:bg-white rounded-full mt-2 animate-wheel"></div>
         </div>
 
         {/* Mobile: Bouncing Arrow */}

@@ -11,7 +11,7 @@ const Projects = () => {
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
       id="project"
-      className="w-full px-[12%] py-10 lg:py-20 scroll-mt-20 relative z-11"
+      className="w-full px-[12%] py-10 lg:py-12 scroll-mt-20 relative z-11"
     >
       <motion.h4
         initial={{ y: 20, opacity: 0 }}
@@ -37,7 +37,7 @@ const Projects = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.7, duration: 0.3 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
+        className="text-center max-w-2xl mx-auto mt-5 mb-8 font-Ovo"
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi esse
         soluta nesciunt, distinctio vitae at dolor voluptatem! Cum, illo magni.
@@ -78,7 +78,7 @@ const Projects = () => {
         transition={{ delay: 1.1, duration: 0.3 }}
         viewport={{ once: true, margin: "-100px" }}
         href=""
-        className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] broder-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-light-hover duration-500 font-Outfit dark:text-white dark:border-white dark:hover:bg-dark-hover"
+        className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] broder-gray-700 rounded-full py-3 px-10 mx-auto my-10 hover:bg-light-hover duration-500 font-Outfit dark:text-white dark:border-white dark:hover:bg-dark-hover"
       >
         Show more{" "}
         <Image

@@ -11,7 +11,7 @@ const About = () => {
       transition={{ duration: 0.5 }}
       viewport={{ once: true, margin: "-100px" }}
       id="about"
-      className="w-full px-[12%] pt-20 pb-10 lg:py-20 scroll-mt-20 relative z-11"
+      className="w-full px-[12%] pt-10 pb-10 lg:py-14 scroll-mt-20 relative z-11"
     >
       <motion.h4
         initial={{ opacity: 0, y: 20 }}
@@ -37,7 +37,7 @@ const About = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="flex w-full max-w-screen-xl mx-auto flex-col lg:flex-row items-center gap-20 my-10 lg:my-20"
+        className="flex w-full max-w-screen-xl mx-auto flex-col lg:flex-row items-center gap-20 my-10 lg:my-10"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -60,7 +60,7 @@ const About = () => {
           viewport={{ once: true }}
           className="flex-1"
         >
-          <p className="mb-10 max-w-2xl lg:max-w-3xl font-Ovo">
+          <p className="mb-6 max-w-2xl lg:max-w-3xl font-Ovo">
             I'm a frontend developer passionate about building clean, responsive, and user-focused web interfaces. I enjoy turning ideas into smooth, functional experiences using React, Next.js, and modern UI tools. With a strong foundation in computer engineering and hands-on project experience, I focus on writing efficient code and creating designs that feel intuitive and polished.
           </p>
 
@@ -104,7 +104,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, delay: 1.3 }}
         viewport={{ once: true }}
-        className="my-10 lg:my-20"
+        className="my-10 lg:my-10"
       >
         <h4 className="text-center mb-8 text-xl font-Ovo">My Skills</h4>
         <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
@@ -128,7 +128,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, delay: 1.5 }}
         viewport={{ once: true }}
-        className="my-10 lg:my-20"
+        className="my-10 lg:my-10"
       >
         <h4 className="text-center mb-8 text-xl font-Ovo">Tools I use</h4>
         <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">

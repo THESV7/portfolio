@@ -11,7 +11,7 @@ const Services = () => {
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
       id="services"
-      className="w-full px-[12%] py-10 lg:py-20 scroll-mt-20 relative z-11"
+      className="w-full px-[12%] py-10 lg:py-12 scroll-mt-20 relative z-11"
     >
       <motion.h4
         initial={{ y: 20, opacity: 0 }}
@@ -38,7 +38,7 @@ const Services = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.7, duration: 0.3 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
+        className="text-center max-w-2xl mx-auto mt-5 mb-8 font-Ovo"
       >
         I specialize in building high-performance web applications, crafting intuitive user interfaces, and ensuring seamless digital experiences with modern technologies.
       </motion.p>

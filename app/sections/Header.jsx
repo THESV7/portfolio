@@ -32,7 +32,7 @@ const Header = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3, delay: 0.4 }}
         viewport={{ once: true }}
-        className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
+        className="text-3xl sm:text-5xl lg:text-[58px] font-Ovo"
       >
         Frontend Web Developer based in Mumbai.
       </motion.h1>
@@ -78,6 +78,7 @@ const Header = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.8 }}
         viewport={{ once: true }}
+        className="mt-12 md:absolute md:bottom-8 md:left-1/2 md:transform md:-translate-x-1/2 w-full flex justify-center"
       >
         <ScrollDown />
       </motion.div>
