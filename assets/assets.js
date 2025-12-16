@@ -138,10 +138,10 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_development, title: 'Web Development', description: 'Building responsive, high-performance web applications using React.js and Next.js, ensuring a seamless user experience.', link: '' },
-    { icon: assets.responsive, title: 'Responsive Design', description: 'Creating mobile-first, adaptive layouts with Tailwind CSS that look great on all devices, from minimal UIs to complex dashboards.', link: '' },
-    { icon: assets.api_integration, title: 'API Integration', description: 'Connecting frontend interfaces with backend services, handling real-time data, and optimizing state management for dynamic content.', link: '' },
-    { icon: assets.performance, title: 'Performance', description: 'Optimizing application speed through debounce, lazy loading, and efficient code practices to ensure fast load times and smooth interactions.', link: '' },
+    { icon: assets.web_development, title: 'Web Development', description: 'Building high-performance, responsive web apps with React.js and Next.js.', link: '' },
+    { icon: assets.responsive, title: 'Responsive Design', description: 'Creating adaptive, mobile-first layouts using Tailwind CSS.', link: '' },
+    { icon: assets.api_integration, title: 'API Integration', description: 'Seamlessly connecting frontends with backend services and APIs.', link: '' },
+    { icon: assets.performance, title: 'Performance', description: 'Optimizing speed via lazy loading and efficient code.', link: '' },
 ]
 
 export const infoList = [

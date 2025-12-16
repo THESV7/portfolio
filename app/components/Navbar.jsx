@@ -134,7 +134,7 @@ const Navbar = () => {
       />
 
       <div className="absolute top-0 right-0 w-11/12 z-10 translate-y-[-80%] dark:hidden">
-        <Image src={assets.header_bg_color} alt="" className="w-full blur-md" />
+        <Image src={assets.header_bg_color} alt="" className="w-full blur-md pointer-events-none select-none" />
       </div>
       
       <nav

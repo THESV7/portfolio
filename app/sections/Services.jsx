@@ -48,17 +48,19 @@ const Services = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.5 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-auto gap-6 my-10 font-Outfit"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10 font-Outfit"
       >
         {serviceData.map(({ icon, title, description, link }, index) => (
           <motion.div
             whileHover={{ scale: 1.05 }}
             key={index}
-            className="border border-gray-400 rounded-lg px-8 py-10 hover:shadow-black cursor-pointer hover:bg-light-hover hover:-translate-y-1 duration-500 dark:hover:bg-dark-hover dark:hover:shadow-white"
+            className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-light-hover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-dark-hover"
           >
+            
             <div className="w-12 h-12 bg-[#ff004f] rounded-lg flex items-center justify-center mb-4">
               <Image src={icon} alt="" className="w-6 invert" />
             </div>
+            
             <h3 className="text-lg my-4 text-gray-700 dark:text-white">
               {title}
             </h3>

@@ -43,7 +43,7 @@ const Contact = () => {
         src="/footer-bg-color.png"
         alt="background"
         fill
-        className="object-cover blur-lg -z-10 dark:hidden"
+        className="object-cover blur-lg -z-10 dark:hidden pointer-events-none select-none"
       />
 
       <motion.h4
