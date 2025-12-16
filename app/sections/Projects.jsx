@@ -48,24 +48,74 @@ const Projects = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.5 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-auto my-10 gap-5 font-Outfit dark:text-black"
+        className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 my-10"
       >
         {workData.map((project, index) => (
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ y: -5 }}
             transition={{ duration: 0.3 }}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
             key={index}
-            style={{ backgroundImage: `url(${project.bgImage})` }}
+            className="border-[0.5px] border-gray-400 rounded-xl overflow-hidden cursor-pointer hover:shadow-black duration-500 dark:border-white dark:hover:shadow-white"
           >
-            <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-              <div>
-                <h2 className="font-semibold">{project.title}</h2>
-                <p className="text-base text-gray-700">{project.description}</p>
+            <div className="aspect-video relative overflow-hidden bg-black/5 dark:bg-black/20">
+              <Image 
+                src={project.bgImage} 
+                alt={project.title}
+                width={800}
+                height={500}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
+              />
+            </div>
+            
+            <div className="p-6 bg-white dark:bg-transparent font-Outfit">
+              <div className="flex items-center gap-3 mb-3">
+                 <div className="p-2 border rounded-full border-gray-300 dark:border-white/20 hover:-translate-y-1 duration-500">
+                    <Image src={assets.vscode} alt="" className="w-4" />
+                 </div>
+                 <div className="p-2 border rounded-full border-gray-300 dark:border-white/20 hover:-translate-y-1 duration-500">
+                    <Image src={assets.firebase} alt="" className="w-4" />
+                 </div>
+                  <div className="p-2 border rounded-full border-gray-300 dark:border-white/20 hover:-translate-y-1 duration-500">
+                    <Image src={assets.mongodb} alt="" className="w-4" />
+                 </div>
+                 <div className="p-2 border rounded-full border-gray-300 dark:border-white/20 hover:-translate-y-1 duration-500">
+                    <Image src={assets.git} alt="" className="w-4" />
+                 </div>
               </div>
 
-              <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                <Image src={assets.send_icon} alt="send-icon" className="w-5" />
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="text-xl font-bold text-gray-700 dark:text-white">
+                  {project.title}
+                </h3>
+              </div>
+              
+              <p className="text-gray-600 dark:text-white/80 mb-4 leading-relaxed">
+                {project.description}
+              </p>
+              
+              <div className="flex items-center gap-5">
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm font-medium text-blue-600 border border-blue-600 bg-white rounded-lg px-4 py-2 hover:bg-blue-50 transition-all duration-300 hover:scale-105 dark:bg-transparent dark:text-blue-400 dark:border-blue-400 dark:hover:bg-blue-900/20"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-currentColor">
+                    <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg> 
+                  Live Demo
+                </a>
+                
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm font-medium text-gray-800 border border-gray-800 bg-white rounded-lg px-4 py-2 hover:bg-gray-50 transition-all duration-300 hover:scale-105 dark:bg-transparent dark:text-gray-300 dark:border-gray-300 dark:hover:bg-white/10"
+                >
+                  <Image src={assets.github} alt="" className="w-4 dark:invert" />
+                  GitHub
+                </a>
               </div>
             </div>
           </motion.div>
