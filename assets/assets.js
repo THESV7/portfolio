@@ -40,6 +40,11 @@ import responsive from './services/responsive.svg';
 import api_integration from './services/api-integration.svg';
 import performance from './services/performance.svg';
 
+import cindefind from './project/cindefind.png';
+import dashboard_ui from './project/dashboard_ui.png';
+import ecommerce_ui from './project/e-commerce_ui.png';
+import nikeshoes_ui from './project/nikeshoes_ui.png';
+
 // New SVG imports
 import html from './skills/html.svg';
 import css from './skills/css.svg';
@@ -112,36 +117,44 @@ export const assets = {
     responsive,
     api_integration,
     performance,
+    cindefind,
+    dashboard_ui,
+    ecommerce_ui,
+    nikeshoes_ui,
 };
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
+        title: 'CineFind Project',
+        description: 'A comprehensive movie discovery platform that allows users to search for movies, view detailed information, watch trailers, and save their favorites. The application features a modern, responsive user interface with advanced filtering and sorting options to enhance the user experience. Built with the latest web technologies to ensure fast performance and seamless navigation across all devices.',
+        bgImage: assets.cindefind,
         link: '',
         github: '',
+        tools: [assets.vscode, assets.firebase, assets.mongodb, assets.git],
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
+        title: 'Dashboard UI',
+        description: 'An intuitive and visually appealing admin dashboard designed for managing complex data sets and user activities. It includes interactive charts, real-time data updates, and customizable widgets to provide key insights at a glance. The layout is fully responsive and optimized for both desktop and tablet views, making it easy for administrators to monitor performance on the go.',
+        bgImage: assets.dashboard_ui,
         link: '',
         github: '',
+        tools: [assets.vscode, assets.firebase, assets.mongodb, assets.git],
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
+        title: 'E-Commerce Platform',
+        description: 'A robust e-commerce solution featuring a secure shopping cart, user authentication, and filtered product listings. The platform supports multiple payment gateways and offers a streamlined checkout process. With a focus on user experience, the design ensures easy navigation, quick product search, and mobile compatibility for shoppers accessing the site from their smartphones.',
+        bgImage: assets.ecommerce_ui,
         link: '',
         github: '',
+        tools: [assets.vscode, assets.firebase, assets.mongodb, assets.git],
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        title: 'Nike Shoes Store',
+        description: 'A stylish and dynamic online store concept for Nike shoes, highlighting premium products with high-quality imagery and immersive animations. The site features a unique product configurator, allowing users to customize their shoes before purchase. The clean and modern aesthetic reflects the brand\'s identity while providing a smooth and engaging shopping journey for sneaker enthusiasts.',
+        bgImage: assets.nikeshoes_ui,
         link: '',
         github: '',
+        tools: [assets.vscode, assets.firebase, assets.mongodb, assets.git],
     },
 ]
 

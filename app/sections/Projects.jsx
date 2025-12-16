@@ -61,9 +61,9 @@ const Projects = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             whileHover={{ y: -5 }}
             key={project.title}
-            className="border-[0.5px] border-gray-400 rounded-xl overflow-hidden cursor-pointer hover:shadow-black duration-500 dark:border-white dark:hover:shadow-white"
+            className="border-[0.5px] border-gray-400 rounded-xl overflow-hidden cursor-pointer hover:shadow-black duration-500 dark:border-white dark:hover:bg-dark-hover"
           >
-            <div className="aspect-video relative overflow-hidden bg-black/5 dark:bg-black/20">
+            <div className="aspect-video relative overflow-hidden bg-black/5 dark:bg-black/20 border-b border-gray-500/30 dark:border-white/20">
               <Image 
                 src={project.bgImage} 
                 alt={project.title}
@@ -74,31 +74,24 @@ const Projects = () => {
             </div>
             
             <div className="p-6 bg-white dark:bg-transparent font-Outfit">
-              <div className="flex items-center gap-3 mb-3">
-                 <div className="p-2 border rounded-full border-gray-300 dark:border-white/20 hover:-translate-y-1 duration-500">
-                    <Image src={assets.vscode} alt="" className="w-4" />
-                 </div>
-                 <div className="p-2 border rounded-full border-gray-300 dark:border-white/20 hover:-translate-y-1 duration-500">
-                    <Image src={assets.firebase} alt="" className="w-4" />
-                 </div>
-                  <div className="p-2 border rounded-full border-gray-300 dark:border-white/20 hover:-translate-y-1 duration-500">
-                    <Image src={assets.mongodb} alt="" className="w-4" />
-                 </div>
-                 <div className="p-2 border rounded-full border-gray-300 dark:border-white/20 hover:-translate-y-1 duration-500">
-                    <Image src={assets.git} alt="" className="w-4" />
-                 </div>
-              </div>
-
               <div className="flex items-center justify-between mb-2">
                 <h3 className="text-xl font-bold text-gray-700 dark:text-white">
                   {project.title}
                 </h3>
               </div>
               
-              <p className="text-gray-600 dark:text-white/80 mb-4 leading-relaxed">
+              <p className="text-gray-600 dark:text-white/80 mb-4 leading-relaxed line-clamp-3">
                 {project.description}
               </p>
-              
+
+              <div className="flex items-center gap-3 mb-5">
+                {project.tools.map((tool, index) => (
+                  <div key={index} className="p-2 border rounded-full border-gray-300 dark:border-white/20 hover:-translate-y-1 duration-500">
+                    <Image src={tool} alt="" className="w-4" />
+                  </div>
+                ))}
+              </div>
+
               <div className="flex items-center gap-5">
                 <a 
                   href={project.link} 
