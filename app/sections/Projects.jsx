@@ -1,9 +1,12 @@
+"use client";
 import { assets, workData } from "@/assets/assets";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 
 const Projects = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -50,11 +53,14 @@ const Projects = () => {
         viewport={{ once: true, margin: "-100px" }}
         className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 my-10"
       >
-        {workData.map((project, index) => (
+        {workData.slice(0, isExpanded ? workData.length : 3).map((project, index) => (
           <motion.div
+            layout
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             whileHover={{ y: -5 }}
-            transition={{ duration: 0.3 }}
-            key={index}
+            key={project.title}
             className="border-[0.5px] border-gray-400 rounded-xl overflow-hidden cursor-pointer hover:shadow-black duration-500 dark:border-white dark:hover:shadow-white"
           >
             <div className="aspect-video relative overflow-hidden bg-black/5 dark:bg-black/20">
@@ -122,26 +128,26 @@ const Projects = () => {
         ))}
       </motion.div>
 
-      <motion.a
+      <motion.button
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.3 }}
-        viewport={{ once: true, margin: "-100px" }}
-        href=""
-        className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] broder-gray-700 rounded-full py-3 px-10 mx-auto my-10 hover:bg-light-hover duration-500 font-Outfit dark:text-white dark:border-white dark:hover:bg-dark-hover"
+        viewport={{ once: true }}
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-10 hover:bg-light-hover duration-500 font-Outfit dark:text-white dark:border-white dark:hover:bg-dark-hover opacity-0"
       >
-        Show more{" "}
+        {isExpanded ? 'Show less' : 'Show more'}
         <Image
           src={assets.right_arrow_bold}
           alt="Right-arrow"
-          className="w-4 block dark:hidden"
+          className={`w-4 block dark:hidden transform transition-transform duration-500 ${isExpanded ? 'rotate-180' : ''}`}
         />
         <Image
           src={assets.right_arrow_bold_dark}
           alt="Right-arrow"
-          className="w-4 hidden dark:block"
+          className={`w-4 hidden dark:block transform transition-transform duration-500 ${isExpanded ? 'rotate-180' : ''}`}
         />
-      </motion.a>
+      </motion.button>
     </motion.div>
   );
 };
