@@ -44,6 +44,8 @@ import cindefind from './project/cindefind.png';
 import dashboard_ui from './project/dashboard_ui.png';
 import ecommerce_ui from './project/e-commerce_ui.png';
 import nikeshoes_ui from './project/nikeshoes_ui.png';
+import react_nex from './project/react-nex.png';
+import testfunda_extractor from './project/testfunda_extractor.png';
 
 // New SVG imports
 import html from './skills/html.svg';
@@ -121,40 +123,59 @@ export const assets = {
     dashboard_ui,
     ecommerce_ui,
     nikeshoes_ui,
+    react_nex,
+    testfunda_extractor,
 };
 
 export const workData = [
     {
-        title: 'CineFind Project',
-        description: 'A comprehensive movie discovery platform that allows users to search for movies, view detailed information, watch trailers, and save their favorites. The application features a modern, responsive user interface with advanced filtering and sorting options to enhance the user experience. Built with the latest web technologies to ensure fast performance and seamless navigation across all devices.',
+        title: 'React Nex NPM Component Library',
+        description: 'Developed an npm package of highly customizable UI components for React and Next.js, featuring single-component installation to minimize bundle size and improve performance. Built comprehensive and responsive documentation pages utilizing Nextra 2.0 to enhance developer experience and component integration.',
+        bgImage: assets.react_nex,
+        link: 'https://react-nex-docs.vercel.app/',
+        github: 'https://github.com/Sahilwagh03/React-Nex',
+        github2: 'https://github.com/Sahilwagh03/React-Nex-Docs',
+        tools: [assets.react, assets.nextjs, assets.tailwind, assets.github],
+    },
+    {
+        title: 'CineFind Movie Discovery App',
+        description: 'Built a responsive movie discovery platform utilizing React.js, Tailwind CSS, and the TMDB API to display real-time trending media, cast details, and recommendations. Optimized application performance and user experience by implementing debounced search, innite scrolling, dynamic routing, and embedded trailer playback.',
         bgImage: assets.cindefind,
+        link: 'https://cinefind-alpha.vercel.app/',
+        github: 'https://github.com/THESV7/movie-webapp',
+        tools: [assets.react, assets.tailwind, assets.api_integration, assets.github],
+    },
+    {
+        title: 'TestFunda AI Mock Analyzer',
+        description: 'A powerful Chrome Extension designed to extract, analyze, and format complex mock exam data from the TestFunda platform into comprehensive, actionable performance reports. Powered by Vanilla JavaScript and the Google Gemini AI API, this tool intelligently parses unstructured exam content, automatically categorizes questions by topic, and provides custom analytics to help optimize your study strategy.',
+        bgImage: assets.testfunda_extractor,
         link: '',
-        github: '',
-        tools: [assets.vscode, assets.firebase, assets.mongodb, assets.git],
+        github: 'https://github.com/THESV7/Testfunda-Extractor',
+        tools: [assets.javascript, assets.html, assets.css, assets.github],
+    },
+    {
+        title: 'E-Commerce Website',
+        description: 'A robust e-commerce solution featuring a secure shopping cart, user authentication, and filtered product listings. The platform supports multiple payment gateways and offers a streamlined checkout process. With a focus on user experience, the design ensures easy navigation, quick product search, and mobile compatibility for shoppers accessing the site from their smartphones.',
+        bgImage: assets.ecommerce_ui,
+        link: 'https://e-commerce-website-omega-lake.vercel.app/',
+        github: 'https://github.com/THESV7/E-commerce-website',
+        tools: [assets.html, assets.css, assets.javascript, assets.github],
+    },
+    {
+        title: 'Nike Shoes UI',
+        description: 'Developed a responsive e-commerce landing page using React.js and Tailwind CSS to showcase modern UI/UX design principles. Translated design concepts into functional, pixel-perfect frontend components with a focus on uid layouts and an intuitive user interface.',
+        bgImage: assets.nikeshoes_ui,
+        link: 'https://nike-shoes-ui.vercel.app/',
+        github: 'https://github.com/THESV7/Nike_Shoes_UI',
+        tools: [assets.react, assets.tailwind, assets.vscode, assets.github],
     },
     {
         title: 'Dashboard UI',
         description: 'An intuitive and visually appealing admin dashboard designed for managing complex data sets and user activities. It includes interactive charts, real-time data updates, and customizable widgets to provide key insights at a glance. The layout is fully responsive and optimized for both desktop and tablet views, making it easy for administrators to monitor performance on the go.',
         bgImage: assets.dashboard_ui,
-        link: '',
-        github: '',
-        tools: [assets.vscode, assets.firebase, assets.mongodb, assets.git],
-    },
-    {
-        title: 'E-Commerce Platform',
-        description: 'A robust e-commerce solution featuring a secure shopping cart, user authentication, and filtered product listings. The platform supports multiple payment gateways and offers a streamlined checkout process. With a focus on user experience, the design ensures easy navigation, quick product search, and mobile compatibility for shoppers accessing the site from their smartphones.',
-        bgImage: assets.ecommerce_ui,
-        link: '',
-        github: '',
-        tools: [assets.vscode, assets.firebase, assets.mongodb, assets.git],
-    },
-    {
-        title: 'Nike Shoes Store',
-        description: 'A stylish and dynamic online store concept for Nike shoes, highlighting premium products with high-quality imagery and immersive animations. The site features a unique product configurator, allowing users to customize their shoes before purchase. The clean and modern aesthetic reflects the brand\'s identity while providing a smooth and engaging shopping journey for sneaker enthusiasts.',
-        bgImage: assets.nikeshoes_ui,
-        link: '',
-        github: '',
-        tools: [assets.vscode, assets.firebase, assets.mongodb, assets.git],
+        link: 'https://weframetech-frontend-sigma.vercel.app/',
+        github: 'https://github.com/THESV7/weframetech-frontend',
+        tools: [assets.react, assets.tailwind, assets.vscode, assets.github],
     },
 ]
 

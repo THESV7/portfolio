@@ -21,8 +21,8 @@ const Footer = () => {
         <p className="">&copy; 2025 Smit Vadhel. All rights reserved.</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
           <li><a target="_blank" href="https://github.com/THESV7">Github</a></li>
-          <li><a target="_blank" href="https://github.com/THESV7">LinkedIn</a></li>
-          <li><a target="_blank" href="https://github.com/THESV7">Twitter</a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/smit-vadhel-237b2b118/">LinkedIn</a></li>
+          <li><a target="_blank" href="https://www.instagram.com/smit_vadhel/">Instagram</a></li>
         </ul>
       </div>
 

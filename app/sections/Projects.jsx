@@ -87,34 +87,50 @@ const Projects = () => {
               <div className="flex items-center gap-3 mb-5">
                 {project.tools.map((tool, index) => (
                   <div key={index} className="p-2 border rounded-full border-gray-300 dark:border-white/20 hover:-translate-y-1 duration-500">
-                    <Image src={tool} alt="" className="w-4" />
+                    <Image src={tool} alt="" className={`w-4 ${(tool === assets.github || tool === assets.nextjs || tool === assets.api_integration) ? 'dark:invert' : ''}`} />
                   </div>
                 ))}
               </div>
 
-              <div className="flex items-center gap-5">
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm font-medium text-blue-600 border border-blue-600 bg-white rounded-lg px-4 py-2 hover:bg-blue-50 transition-all duration-300 hover:scale-105 dark:bg-transparent dark:text-blue-400 dark:border-blue-400 dark:hover:bg-blue-900/20"
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-currentColor">
-                    <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg> 
-                  Live Demo
-                </a>
+              <div className="flex flex-wrap items-center gap-5">
+                {project.link && (
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm font-medium text-blue-600 border border-blue-600 bg-white rounded-lg px-4 py-2 hover:bg-blue-50 transition-all duration-300 hover:scale-105 dark:bg-transparent dark:text-blue-400 dark:border-blue-400 dark:hover:bg-blue-900/20"
+                  >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-currentColor">
+                      <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg> 
+                    Live Demo
+                  </a>
+                )}
                 
-                <a 
-                  href={project.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm font-medium text-gray-800 border border-gray-800 bg-white rounded-lg px-4 py-2 hover:bg-gray-50 transition-all duration-300 hover:scale-105 dark:bg-transparent dark:text-gray-300 dark:border-gray-300 dark:hover:bg-white/10"
-                >
-                  <Image src={assets.github} alt="" className="w-4 dark:invert" />
-                  GitHub
-                </a>
+                {project.github && (
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm font-medium text-gray-800 border border-gray-800 bg-white rounded-lg px-4 py-2 hover:bg-gray-50 transition-all duration-300 hover:scale-105 dark:bg-transparent dark:text-gray-300 dark:border-gray-300 dark:hover:bg-white/10"
+                  >
+                    <Image src={assets.github} alt="" className="w-4 dark:invert" />
+                    GitHub
+                  </a>
+                )}
+
+                {project.github2 && (
+                  <a 
+                    href={project.github2} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm font-medium text-gray-800 border border-gray-800 bg-white rounded-lg px-4 py-2 hover:bg-gray-50 transition-all duration-300 hover:scale-105 dark:bg-transparent dark:text-gray-300 dark:border-gray-300 dark:hover:bg-white/10"
+                  >
+                    <Image src={assets.github} alt="" className="w-4 dark:invert" />
+                    Docs GitHub
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>
